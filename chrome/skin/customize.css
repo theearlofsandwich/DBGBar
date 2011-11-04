@@ -1,0 +1,11 @@
+#phpdebugger-group{
+	height: 32px;
+	width: 32px;
+	background-image: url("chrome://phpdebugger/skin/phpdebugger.png");
+}
+
+
+#phpdebugger-customize { display: none; }
+.phpdebugger-inner { display: none !important;  }
+toolbarpaletteitem[place="toolbar"] #phpdebugger-customize { display: -moz-box; }
+

@@ -1,0 +1,4 @@
+content phpdebugger chrome/content/
+overlay chrome://browser/content/browser.xul chrome://phpdebugger/content/phpdebugger.xul
+style	chrome://global/content/customizeToolbar.xul	chrome://phpdebugger/skin/customize.css
+skin phpdebugger classic/1.0 chrome/skin/

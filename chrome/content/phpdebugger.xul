@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://phpdebugger/skin/phpdebugger.css" type="text/css"?>
+
+<overlay id="phpdebugger-Overlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+         
+    <script type="application/x-javascript" src="chrome://phpdebugger/content/phpdebugger.js" />
+    <script type="application/x-javascript" src="chrome://phpdebugger/content/preferences.js" />
+            
+
+
+
+<toolbarpalette id="BrowserToolbarPalette">
+	<toolbaritem flex="0" id="phpdebugger-group" title="DBGbar">
+               <toolbarbutton id="phpdebugger-MainMenu" type="menu-button" tooltiptext="PHPdebugger debug" label="DBGbar" class="phpdebugger-inner" oncommand="com.originallight.phpdebugger.debugpage('debug')">
+                    <menupopup>
+					<menuitem label="Debug this page" accesskey="d"
+							  tooltiptext="Debug this page"
+							  oncommand="com.originallight.phpdebugger.debugpage('debug'); event.stopPropagation();" />
+					<menuseparator />					
+					<menuitem label="Debug next page" accesskey="n" id="phpdebugger_debugnextpagebtn"
+							  tooltiptext="Debug next page"
+							  oncommand="com.originallight.phpdebugger.debugnextpage('debug'); event.stopPropagation();" checked="false" class="menuitem-iconic" />
+					<menuitem label="Debug next form submit" accesskey="u" id="phpdebugger_debugnextpostbtn"
+							  tooltiptext="Debug next form submit"
+							  oncommand="com.originallight.phpdebugger.debugnextpost('debug'); event.stopPropagation();" checked="false" class="menuitem-iconic" />
+					<menuseparator />
+ 
+					<menuitem label="Debug session" accesskey="s" id="phpdebugger_debugsessionbtn"
+							  tooltiptext="Debug session"
+							  oncommand="com.originallight.phpdebugger.debugsession('debug'); event.stopPropagation();" checked="false" class="menuitem-iconic"/>
+					<menuseparator />
+
+					<menuitem label="Kill debug session" accesskey="k" id="phpdebugger_killsessionbtn"
+							  tooltiptext="Kill debug session"
+							  oncommand="com.originallight.phpdebugger.killsession(); event.stopPropagation();" />
+
+                    </menupopup>
+                </toolbarbutton>
+                <toolbarbutton id="phpdebugger-Profile" type="menu-button" tooltiptext="PHPdebugger profile" label="Profile" class="phpdebugger-inner" oncommand="com.originallight.phpdebugger.debugpage('profile')">
+                    <menupopup>
+					<menuitem label="Profile this page" accesskey="p"
+							  tooltiptext="Profile this page"
+							  oncommand="com.originallight.phpdebugger.debugpage('profile'); event.stopPropagation();" />
+					<menuseparator />
+					<menuitem label="Profile next page" accesskey="n" id="phpdebugger_profilenextpagebtn"
+							  tooltiptext="Profile next page"
+							  oncommand="com.originallight.phpdebugger.debugnextpage('profile'); event.stopPropagation();" checked="false" class="menuitem-iconic" />
+					<menuitem label="Profile next form submit" accesskey="u" id="phpdebugger_profilenextpostbtn"
+							  tooltiptext="Profile next form submit"
+							  oncommand="com.originallight.phpdebugger.debugnextpost('profile'); event.stopPropagation();" checked="false" class="menuitem-iconic" />
+					<menuseparator />
+ 
+                    <menuitem label="Profile session" accesskey="s" id="phpdebugger_profilesessionbtn"
+                              tooltiptext="Profile session"
+                              oncommand="com.originallight.phpdebugger.debugsession('profile'); event.stopPropagation();" checked="false" class="menuitem-iconic"/>
+
+                    </menupopup>
+                </toolbarbutton>
+
+                <toolbarbutton id="phpdebugger-Prefs" type="menu" tooltiptext="DBGbar Options" label="Options" 
+                	class="phpdebugger-inner">
+                	<menupopup id="phpdebugger-urlmenu" onpopupshowing="com.originallight.phpdebuggerPrefs.showurls()" />
+                </toolbarbutton>
+
+                <toolbarbutton id="phpdebugger-customize" type="button" tooltiptext="PHP debugger" label="DBGbar" 
+			image="chrome://phpdebugger/skin/phpdebugger.png" />
+			                    
+	</toolbaritem>
+</toolbarpalette>          
+
+<toolbox id="navigator-toolbox">
+	<toolbar 
+	         class="chromeclass-toolbar"
+	         context="toolbar-context-menu"
+			 collapsed="false"
+	         customizable="true"
+	         hidden="false"
+	         iconsize="small"
+	         id="phpdebugger-Toolbar"
+	         inherits="collapsed,hidden"
+	         mode="full"
+	         persist="collapsed,hidden"
+	         toolbarname="DBGbar Toolbar"
+	         defaultset="phpdebugger-group"
+	/>
+</toolbox>
+
+</overlay>
+

@@ -1,0 +1,22 @@
+#phpdebugger-MainMenu {    list-style-image: url("chrome://phpdebugger/skin/main_large.png"); -moz-box-orient: horizontal;}
+#phpdebugger-Profile {    list-style-image: url("chrome://phpdebugger/skin/profile_large.png"); -moz-box-orient: horizontal;}
+#phpdebugger-Prefs {    list-style-image: url("chrome://phpdebugger/skin/prefs_large.png"); -moz-box-orient: horizontal;}
+
+
+#phpdebugger-MainMenu > .toolbarbutton-menubutton-button {-moz-box-orient: horizontal;}
+toolbar[iconsize="small"] #phpdebugger-MainMenu > .toolbarbutton-menubutton-button {-moz-box-orient: horizontal;}
+
+#phpdebugger-Profile > .toolbarbutton-menubutton-button {-moz-box-orient: horizontal;}
+toolbar[iconsize="small"] #phpdebugger-Profile > .toolbarbutton-menubutton-button {-moz-box-orient: horizontal;}
+
+#phpdebugger-Prefs > .toolbarbutton-menubutton-button {-moz-box-orient: horizontal;}
+toolbar[iconsize="small"] #phpdebugger-Prefs > .toolbarbutton-menubutton-button {-moz-box-orient: horizontal;}
+
+
+toolbar[iconsize="small"] #phpdebugger-MainMenu {    list-style-image: url("chrome://phpdebugger/skin/main.png"); -moz-box-orient: horizontal;}
+toolbar[iconsize="small"] #phpdebugger-Profile {    list-style-image: url("chrome://phpdebugger/skin/profile.png"); -moz-box-orient: horizontal;}
+toolbar[iconsize="small"] #phpdebugger-Prefs {    list-style-image: url("chrome://phpdebugger/skin/prefs.png"); -moz-box-orient: horizontal;}
+
+#phpdebugger-customize { display: none; }
+toolbarpaletteitem[place="toolbar"] .phpdebugger-inner { display: none !important;  }
+toolbarpaletteitem[place="toolbar"] #phpdebugger-customize { display: -moz-box; }

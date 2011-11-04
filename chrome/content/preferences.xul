@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://mozapps/skin/pref/pref.css" type="text/css"?>
+<dialog buttons="accept, cancel" id="phpdebugger-options-dialog" title="DBGbar"
+	ondialogaccept="return com.originallight.phpdebuggerPrefs.saveOptions()" onload="com.originallight.phpdebuggerPrefs.initializeOptions()"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	<script type="application/x-javascript" src="chrome://phpdebugger/content/preferences.js"/>
+	<vbox flex="1">
+        <groupbox>
+		<caption label="DBGbar Options"/>
+		<hbox>
+		<vbox width="400">
+			<label control="phpdebugger_clienthost" value="Machine clienthost:"/><textbox id="phpdebugger_clienthost" prefstring="optclienthost"/>
+			<label control="phpdebugger_port" value="Port:"/><textbox id="phpdebugger_port" prefstring="optport"/>
+			<label control="phpdebugger_sessid" value="Session id:"/><textbox id="phpdebugger_sessid" prefstring="optsessid"/>
+
+			<label control="phpdebugger_validurls" value="URLs you want to allow debugging for."/>
+			<label control="phpdebugger_validurls" value="  If the current URL (displayed in your brower URL bar) is not in the list,"/>
+			<label control="phpdebugger_validurls" value="  then the DBG buttons are not active. Example list items ('*' is a wildcard):"/>
+			<label control="phpdebugger_validurls" value="      http://localhost"/>
+			<label control="phpdebugger_validurls" value="      http://*.myfirstdomain.com"/>
+			<label control="phpdebugger_validurls" value="      http://*.myseconddomain.com"/>
+			<textbox id="phpdebugger_validurls" prefstring="opturls" rows="5" multiline="true"/>
+
+		</vbox>
+		</hbox>
+        </groupbox>  
+	</vbox>
+</dialog>

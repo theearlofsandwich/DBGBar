@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+
+    <Description about="urn:mozilla:install-manifest">
+
+        <!-- Required Items -->
+        <em:id>PHPdebugger@originallight.com</em:id>
+        <em:name>DBGbar</em:name>
+		<em:type>2</em:type>
+        <em:version>0.8</em:version>
+	<em:optionsURL>chrome://phpdebugger/content/preferences.xul</em:optionsURL>
+
+
+        <em:targetApplication>
+            <Description>
+                <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+                <em:minVersion>2.0</em:minVersion>
+                <em:maxVersion>7.*</em:maxVersion>
+            </Description>
+        </em:targetApplication>
+
+        <!-- Optional Items -->
+	<em:iconURL>chrome://phpdebugger/skin/phpdebugger.png</em:iconURL>
+        <em:creator>Ian Flory</em:creator>
+        <em:description>A PHP debug toolbar for DBG.</em:description>
+        <em:homepageURL>http://www.originallight.com/</em:homepageURL>
+	<em:contributor>monk.e.boy</em:contributor>
+
+    </Description>
+</RDF>
